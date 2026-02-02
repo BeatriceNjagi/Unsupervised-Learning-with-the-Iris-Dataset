@@ -5,8 +5,52 @@ and discovering natural groupings without using labels or evaluation metrics.
 
 ## Dataset
 
-The Iris dataset has  the following features:
-Sepal Length, Sepal Width, Petal Length, Petal Width
+The Iris dataset contains 150 samples of iris flowers, each described by:
+
+- sepal length (cm)
+
+- sepal width (cm)
+
+- petal length (cm)
+
+- petal width (cm)
+
+## Workflow
+
+### 1. Load the Iris Dataset
+
+The dataset was loaded directly using Python’s built-in dataset library (no CSV file). This provides clean, ready-to-use numerical features.
+
+### 2. Visual Exploration
+
+Before modeling, scatter plots were created to explore relationships between features.
+This step helped reveal patterns, separations, and overlapping regions in the dataset.
+
+Examples examined:
+
+petal length vs petal width
+
+sepal length vs sepal width
+
+### 3. Feature Scaling
+
+Scaling was applied using StandardScaler to ensure all features contribute equally to the clustering process. This step is important because K-Means is distance-based and is affected by differences in feature ranges.
+
+### 4. Elbow Method for Choosing k
+
+The elbow method was used to determine the optimal number of clusters. The “elbow point” indicated that 3 clusters was the most suitable choice for this dataset.
+
+### 5. K-Means Clustering
+
+Using the chosen value of k = 3, K-Means was applied to group the samples into clusters based on similarity in their measurements.
+
+### 6. Scatter Plot Visualization
+
+Cluster results were visualized using a scatter plot based on petal length and petal width. Each cluster was plotted in a different color, and the cluster centroids were highlighted to show the center of each group.
+
+## Notebook
+
+The full implementation, including code, and charts is available in the uploaded .ipynb file.
 
 # Questions:
 
@@ -40,5 +84,5 @@ particularly the elongated middle cluster.
 3
 
 ## What challenges did you notice when clustering the data?
-Non-spherical cluster shapes
-cluster overlap
+- Non-spherical cluster shapes
+- cluster overlap
